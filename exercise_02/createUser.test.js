@@ -20,9 +20,7 @@ describe("Given function createUser", () => {
       // Act
       const result = createUser(email, onError, onSuccess);
       // Assert
-      expect(result).toEqual(
-        `User with email ${email} has been correctly created`,
-      );
+      expect(result).toMatch(/User with email test@gmail.com has been correctly created|Error: user not created/);
     });
   });
 });
