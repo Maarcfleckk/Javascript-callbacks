@@ -23,5 +23,9 @@ console.log(resultEmptyString);
 
 //test with value as string and log result
 
-const resultString = transformStringToArray("Bon dia em dic Marc", onError, onSuccess);
+const resultString = transformStringToArray(
+  "Bon dia em dic Marc",
+  onError,
+  onSuccess,
+);
 console.log(resultString);

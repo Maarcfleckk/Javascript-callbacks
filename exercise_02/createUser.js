@@ -14,11 +14,11 @@
  *  - string
  */
 
-function createUser(email, onError, onSuccess){
-    const number = Math.random();
-    if(number < 0.5 || email === ""){
-        return onError();
-    }
-    return onSuccess(email);
+function createUser(email, onError, onSuccess) {
+  const number = Math.random();
+  if (number < 0.5 || email === "") {
+    return onError();
+  }
+  return onSuccess(email);
 }
 export default createUser;

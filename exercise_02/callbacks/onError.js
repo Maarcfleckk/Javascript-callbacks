@@ -12,7 +12,7 @@
  * When called this function returns an error string
  * @returns {string}
  */
-function onError(){
-    return "Error: user not created";
+function onError() {
+  return "Error: user not created";
 }
 export default onError;

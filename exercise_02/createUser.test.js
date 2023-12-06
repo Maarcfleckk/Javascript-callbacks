@@ -14,16 +14,15 @@ describe("Given function createUser", () => {
   });
   describe("When the function is called with a value of type string", () => {
     const email = "test@gmail.com";
-    test(`Then the text User with email ${email} has been correctly created should be returned.`,() => {
-        // Arrange
-        const email = "test@gmail.com";
-        // Act
-        const result = createUser(email, onError, onSuccess);
-        // Assert
-        expect(result).toEqual(
-          `User with email ${email} has been correctly created`
-        );
-      }
-    );
+    test(`Then the text User with email ${email} has been correctly created should be returned.`, () => {
+      // Arrange
+      const email = "test@gmail.com";
+      // Act
+      const result = createUser(email, onError, onSuccess);
+      // Assert
+      expect(result).toEqual(
+        `User with email ${email} has been correctly created`,
+      );
+    });
   });
 });

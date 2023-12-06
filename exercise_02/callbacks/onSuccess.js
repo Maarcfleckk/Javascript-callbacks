@@ -11,10 +11,10 @@
 
 /**
  * It receives an email as string and returns a string
- * @param {string} email 
+ * @param {string} email
  * @returns {string}
  */
-function onSuccess(email){
-    return `User with email ${email} has been correctly created`;
+function onSuccess(email) {
+  return `User with email ${email} has been correctly created`;
 }
 export default onSuccess;
