@@ -12,3 +12,19 @@
  * output
  *  - array
  */
+
+/**
+ * Returns onError or onSuccess function depending if value is a string and if it's not empty
+ * @param {*} value 
+ * @param {function} onError 
+ * @param {function} onSuccess 
+ * @returns 
+ */
+function transformStringToArray(value, onError, onSuccess){
+    if(typeof value === 'string' && value !== ""){
+        return onSuccess(value);
+    }
+    return onError();
+}
+
+export default transformStringToArray;
