@@ -14,13 +14,12 @@
  *  - string
  */
 
-
 /**
  * A function that depending on the random number value calls whether onError or onSuccess function
- * 
- * @param {string} email 
- * @param {function} onError 
- * @param {function} onSuccess 
+ *
+ * @param {string} email
+ * @param {function} onError
+ * @param {function} onSuccess
  * @returns {string}
  */
 function createUser(email, onError, onSuccess) {
