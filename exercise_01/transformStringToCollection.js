@@ -18,13 +18,13 @@
  * @param {*} value
  * @param {function} onError
  * @param {function} onSuccess
- * @returns
+ * @returns {function}
  */
 function transformStringToArray(value, onError, onSuccess) {
-  if (typeof value !== "string" && value === "") {
-    return onSuccess(value);
+  if (typeof value !== "string" || value === "") {
+    return onError();
   }
-  return onError();
+  return onSuccess(value);
 }
 
 export default transformStringToArray;
