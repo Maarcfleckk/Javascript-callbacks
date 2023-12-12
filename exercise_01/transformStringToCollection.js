@@ -21,7 +21,7 @@
  * @returns
  */
 function transformStringToArray(value, onError, onSuccess) {
-  if (typeof value === "string" && value !== "") {
+  if (typeof value !== "string" && value === "") {
     return onSuccess(value);
   }
   return onError();
