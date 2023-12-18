@@ -25,8 +25,10 @@ describe("Given function transformStringToArray", () => {
   test("When the value type of is an array then empty array should be returned", () => {
     // Arrange
     const array = [1, 3, "abc"];
+    
     // Act
     const result = transformStringToArray(array, mockOnError, mockOnSuccess);
+    
     // Assert
     expect(result).toEqual([]);
     expect(mockOnError).toHaveBeenCalledTimes(1);
@@ -35,12 +37,15 @@ describe("Given function transformStringToArray", () => {
   test("When the value type of is a boolean then empty array should be returned", () => {
     // Arrange
     const boolean = true;
+    
     // Act
     const result = transformStringToArray(boolean, mockOnError, mockOnSuccess);
+    
     // Assert
     expect(result).toEqual([]);
     expect(mockOnError).toHaveBeenCalledTimes(1);
   });
+  
   test("When the value is an empty string then empty array should be returned", () => {
     // Arrange
     const emptyString = "";
