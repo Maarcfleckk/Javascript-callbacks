@@ -4,6 +4,7 @@ describe("Given function transformStringToArray", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
+  
   const mockOnError = jest.fn().mockImplementation(() => []);
   const mockOnSuccess = jest
     .fn()
@@ -12,8 +13,10 @@ describe("Given function transformStringToArray", () => {
   test("When the value type of is a number then empty array should be returned", () => {
     //Arrange
     const number = 12;
+    
     //Act
     const result = transformStringToArray(number, mockOnError, mockOnSuccess);
+    
     //Assert
     expect(result).toEqual([]);
     expect(mockOnError).toHaveBeenCalledTimes(1);
