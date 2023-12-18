@@ -25,6 +25,7 @@ function transformStringToArray(value, onError, onSuccess) {
   if (!validateString(value)) {
     return onError();
   }
+
   return onSuccess(value);
 }
 
