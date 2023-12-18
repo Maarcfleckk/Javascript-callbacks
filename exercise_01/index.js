@@ -1,6 +1,7 @@
 import onError from "./callbacks/onError.js";
 import onSuccess from "./callbacks/onSuccess.js";
 import transformStringToArray from "./transformStringToCollection.js";
+
 //test with value as number and log result
 
 const resultNumber = transformStringToArray(12, onError, onSuccess);
