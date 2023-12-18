@@ -16,8 +16,8 @@
  */
 function onSuccess(value) {
   const words = value.split(/\s+/);
- 
-   return words;
+
+  return words;
 }
 
 export default onSuccess;
