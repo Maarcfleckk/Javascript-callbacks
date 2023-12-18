@@ -1,4 +1,3 @@
-
 import validateString from "../helpers/validateString.js";
 /**
  * Define 'transformStringToArray' function and signature (JSDocs)

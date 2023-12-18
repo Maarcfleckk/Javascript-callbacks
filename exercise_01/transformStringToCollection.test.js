@@ -1,21 +1,19 @@
 import transformStringToArray from "./transformStringToCollection.js";
 
 describe("Given function transformStringToArray", () => {
-  beforeEach(()=> {
+  beforeEach(() => {
     jest.clearAllMocks();
   });
-  const mockOnError = jest
-  .fn()
-  .mockImplementation(()=> []);
+  const mockOnError = jest.fn().mockImplementation(() => []);
   const mockOnSuccess = jest
-  .fn()
-  .mockImplementation(()=> ["Bon", "dia", "em", "dic", "Marc"]);
+    .fn()
+    .mockImplementation(() => ["Bon", "dia", "em", "dic", "Marc"]);
 
-  test("When the value type of is a number then empty array should be returned", () =>{
+  test("When the value type of is a number then empty array should be returned", () => {
     //Arrange
     const number = 12;
     //Act
-    const result = transformStringToArray(number,mockOnError, mockOnSuccess);
+    const result = transformStringToArray(number, mockOnError, mockOnSuccess);
     //Assert
     expect(result).toEqual([]);
     expect(mockOnError).toHaveBeenCalledTimes(1);
@@ -23,9 +21,9 @@ describe("Given function transformStringToArray", () => {
 
   test("When the value type of is an array then empty array should be returned", () => {
     // Arrange
-      const array = [1, 3, "abc"];
+    const array = [1, 3, "abc"];
     // Act
-    const result = transformStringToArray(array, mockOnError,mockOnSuccess);
+    const result = transformStringToArray(array, mockOnError, mockOnSuccess);
     // Assert
     expect(result).toEqual([]);
     expect(mockOnError).toHaveBeenCalledTimes(1);
@@ -33,27 +31,35 @@ describe("Given function transformStringToArray", () => {
 
   test("When the value type of is a boolean then empty array should be returned", () => {
     // Arrange
-      const boolean = true;
+    const boolean = true;
     // Act
-      const result = transformStringToArray(boolean, mockOnError, mockOnSuccess);
+    const result = transformStringToArray(boolean, mockOnError, mockOnSuccess);
     // Assert
     expect(result).toEqual([]);
     expect(mockOnError).toHaveBeenCalledTimes(1);
   });
   test("When the value is an empty string then empty array should be returned", () => {
     // Arrange
-      const emptyString = "";
+    const emptyString = "";
     // Act
-      const result = transformStringToArray(emptyString, mockOnError, mockOnSuccess);
+    const result = transformStringToArray(
+      emptyString,
+      mockOnError,
+      mockOnSuccess,
+    );
     // Assert
     expect(result).toEqual([]);
     expect(mockOnError).toHaveBeenCalledTimes(1);
   });
   test("When the value type of is an array then empty array should be returned", () => {
     // Arrange
-      const fulfilledString = "Bon dia em dic Marc";
+    const fulfilledString = "Bon dia em dic Marc";
     // Act
-      const result = transformStringToArray(fulfilledString, mockOnError, mockOnSuccess);
+    const result = transformStringToArray(
+      fulfilledString,
+      mockOnError,
+      mockOnSuccess,
+    );
     // Assert
     expect(result).toEqual(["Bon", "dia", "em", "dic", "Marc"]);
     expect(mockOnSuccess).toHaveBeenCalledTimes(1);
