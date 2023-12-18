@@ -44,25 +44,30 @@ describe("Given function transformStringToArray", () => {
   test("When the value is an empty string then empty array should be returned", () => {
     // Arrange
     const emptyString = "";
+    
     // Act
     const result = transformStringToArray(
       emptyString,
       mockOnError,
       mockOnSuccess,
     );
+    
     // Assert
     expect(result).toEqual([]);
     expect(mockOnError).toHaveBeenCalledTimes(1);
   });
+  
   test("When the value type of is an array then empty array should be returned", () => {
     // Arrange
     const fulfilledString = "Bon dia em dic Marc";
+    
     // Act
     const result = transformStringToArray(
       fulfilledString,
       mockOnError,
       mockOnSuccess,
     );
+    
     // Assert
     expect(result).toEqual(["Bon", "dia", "em", "dic", "Marc"]);
     expect(mockOnSuccess).toHaveBeenCalledTimes(1);
